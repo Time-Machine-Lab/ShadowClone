@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/shadow-clone-bilocation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-bilocation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-discovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-discovery/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-distribution/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-distribution/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-failover/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-failover/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-health/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-health/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-msg/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-msg/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-task/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shadow-clone-task/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
