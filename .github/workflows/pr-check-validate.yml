@@ -29,8 +29,11 @@ jobs:
 
     - name: Validate Title Check
       run: |
-        if grep -qi '#' <<<"$PR_TITLE"; then
+        if grep -qi '#' <<< "$PR_TITLE"; then
           echo "Title contains '#'"
         else
           echo "Title does not contain '#'"
-          exit 1 # 标题不包含#则退出，阻止后续操作
+        fi
+        if ! $?; then
+          exit 1
+        fi
