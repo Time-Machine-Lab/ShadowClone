@@ -34,6 +34,6 @@ jobs:
         else
           echo "Title does not contain '#'"
         fi
-        if ! $?; then
+        if [ $? -ne 0 ]; then
           exit 1
         fi
