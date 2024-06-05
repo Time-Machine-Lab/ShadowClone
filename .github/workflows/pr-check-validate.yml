@@ -29,7 +29,7 @@ jobs:
 
     - name: Validate Title Check
       run: |
-        if grep -q '#[0-9]+' <<< "$PR_TITLE"; then
+        if grep -q '#[0-9]\+' <<< "$PR_TITLE"; then
           echo "Title contains '#'"
         else
           echo "Title does not contain '#'"
