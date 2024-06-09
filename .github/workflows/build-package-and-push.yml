@@ -27,5 +27,6 @@ jobs:
           exit 1
         fi
     - name: copy pakages
-        run:cp -R target/ ${{ github.workspace }}/target/
+      run: |
+         cp -R target/ ${{ github.workspace }}/target/
        
