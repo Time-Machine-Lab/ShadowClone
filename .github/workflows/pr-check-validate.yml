@@ -1,0 +1,37 @@
+name: Check PR Info and Validate
+
+on:
+  pull_request:
+    branches:
+      - master # 指定您想监听的分支
+
+jobs:
+  check-pr-info-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # 获取PR信息并将其添加到环境变量
+    - name: set PR_INFO 
+      run: |
+        echo PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }') >> $GITHUB_ENV
+        echo PR_TITLE=$(jq --raw-output .pull_request.title "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
+        echo PR_URL=$(jq --raw-output .pull_request.html_url "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
+        echo PR_USER=$(jq --raw-output .pull_request.user.login "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
+    
+    - name: Print Variables
+      run: |
+        echo PR_NUMBER=$PR_NUMBER
+        echo PR_TITLE=$PR_TITLE
+        echo PR_URL=$PR_URL
+        echo PR_USER=$PR_USER
+
+    - name: Validate Title Check
+      run: |
+        if grep -q '#[0-9]\+' <<< "$PR_TITLE"; then
+          echo "Title contains '#'"
+        else
+          echo "Title does not contain '#'"
+          exit 1 
+        fi
