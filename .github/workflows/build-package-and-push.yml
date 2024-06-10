@@ -26,7 +26,7 @@ jobs:
           echo "Packaging failed, exiting with error code 1"
           exit 1
         fi
-    - name: copy pakages
-      run: |
-         cp -R target/ ${{ github.workspace }}/target/
+    # - name: copy pakages
+    #   run: |
+    #      cp -R target/ ${{ github.workspace }}/target/
        
