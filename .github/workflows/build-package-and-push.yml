@@ -1,0 +1,29 @@
+name: Build Package and push 
+
+on:
+  pull_request:
+    branches:
+      - master # 触发条件，比如当推送至main分支时
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 使用的运行环境
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 # 检出代码到工作目录
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '11' # 根据你的项目需要选择合适的Java版本
+
+    - name: Build and Package with Maven
+      run: |
+        mvn package  # 执行打包命令，跳过测试以加速
+        if [ $? -ne 0 ]; then
+          echo "Packaging failed, exiting with error code 1"
+          exit 1
+        fi
+       
