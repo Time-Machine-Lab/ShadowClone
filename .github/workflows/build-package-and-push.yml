@@ -1,7 +1,7 @@
 name: Build Package and push 
 
 on:
-  push:
+  pull_request:
     branches:
       - master # 触发条件，比如当推送至main分支时
 
